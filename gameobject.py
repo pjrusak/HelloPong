@@ -1,5 +1,6 @@
 __author__ = "pjr"
 
+
 class GameObject(object):
     """
         Base class for Breakout game objects
