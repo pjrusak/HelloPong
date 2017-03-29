@@ -63,7 +63,6 @@ def test_run():
     print("I'm on: ", paddle.get_position())
     paddle.move(50)
     print("After move I'm on: ", paddle.get_position())
-    # game_object.delete()
 
     # pack widgets
     frame.pack()

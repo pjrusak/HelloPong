@@ -38,7 +38,6 @@ def test_run():
     print("I'm on: ", ball.get_position())
     ball.move(50, 50)
     print("After move I'm on: ", ball.get_position())
-    # game_object.delete()
 
     # pack widgets
     frame.pack()
