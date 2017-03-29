@@ -21,3 +21,30 @@ class Ball(gameobject.GameObject):
                                   x + self.radius, y + self.radius,
                                   fill='white')
         super(Ball, self).__init__(canvas, item)
+
+
+def test_run():
+    """
+        Module test function:
+        - create Frame
+        - create Ball and interacts with it's methods
+    """
+    import tkinter as tk
+    root = tk.Tk()
+    root.title('Hello, Pong!')
+    frame = tk.Frame(root)
+    canvas = tk.Canvas(frame, width=600, height=400, bg='#aaaaff')
+    ball = Ball(canvas, 50, 50)
+    print("I'm on: ", ball.get_position())
+    ball.move(50, 50)
+    print("After move I'm on: ", ball.get_position())
+    # game_object.delete()
+
+    # pack widgets
+    frame.pack()
+    canvas.pack()
+    # run widget
+    root.mainloop()
+
+if __name__ == '__main__':
+    test_run()

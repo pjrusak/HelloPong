@@ -18,6 +18,8 @@ class GameObject(object):
         """
             GameObject position getter
         """
+        # coordinates are return as following list [x1, y1, x2, y2]
+        # [x1, y1] is upper left corner point, [x2, y2] is bottom right
         return self.canvas.coords(self.item)
 
     def move(self, x, y):
