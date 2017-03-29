@@ -9,13 +9,13 @@ class Brick(gameobject.GameObject):
     """
     COLORS = {1: '#999999', 2: '#555555', 3: '#222222'}
 
-    def __init__(self, canvas, x, y, hits):
+    def __init__(self, canvas, x, y, hits=3):
         """
             Brick constructor
-        :param canvas: reference to Cavnas
-        :param x:  center position in width dimension
-        :param y:  center position in height dimension
-        :param hits:
+            :param canvas: reference to Cavnas
+            :param x:  center position in width dimension
+            :param y:  center position in height dimension
+            :param hits: number of hits
         """
         self.width = 75
         self.height = 20
@@ -56,7 +56,7 @@ def test_run():
     print("After move I'm on: ", brick1.get_position())
     brick2 = Brick(canvas, 200, 200, 2)
     print("I'm on: ", brick2.get_position())
-    brick3 = Brick(canvas, 300, 300, 3)
+    brick3 = Brick(canvas, 300, 300)
     print("I'm on: ", brick3.get_position())
 
     # pack widgets
